@@ -47,7 +47,7 @@ void wmain(int argc, WCHAR *argv[])
 	}
 
 	//
-	// TO DO: change NULL to '.' to use local account database
+	// TO DO: change NULL to L"." to use local account database
 	//
 	if (!LogonUser(argv[1], NULL, argv[2], LOGON32_LOGON_INTERACTIVE,
 		LOGON32_PROVIDER_DEFAULT, &hToken))
@@ -62,7 +62,7 @@ void wmain(int argc, WCHAR *argv[])
 		DisplayError(L"GetUserProfileDirectory");
 
 	//
-	// TO DO: change NULL to '.' to use local account database
+	// TO DO: change NULL to L"." to use local account database
 	//
 	if (!CreateProcessWithLogonW(argv[1], NULL, argv[2],
 		LOGON_WITH_PROFILE, NULL, argv[3],
